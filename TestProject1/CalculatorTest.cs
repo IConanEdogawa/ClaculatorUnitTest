@@ -36,5 +36,21 @@ namespace TestProject1
 
         }
 
+        [Fact]
+        public void MultiplyTest()
+        {
+            // Arrange
+            double a = 2;
+            double b = 3;
+            double expected = 6;
+
+            // Act
+            double actual = MathUnit.Mul(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
     }
 }
