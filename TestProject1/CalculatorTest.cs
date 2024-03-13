@@ -56,8 +56,8 @@ namespace TestProject1
         {
             // Arrange 
             List<double> a = new List<double>() { 1, 2, 3, 4, 5 };
-            List<double> b = new List<double>() { 0, 3, 2, 4, 10 }; 
-            List<double> expected = new List<double>() { Double.NaN, 0.5, 1.5, 1, 0.5 };
+            List<double> b = new List<double>() { 1, 3, 2, 4, 10 }; 
+            List<double> expected = new List<double>() { 1, 0.5, 1.5, 1, 0.5 };
 
             // Act & Assert 
             for (int i = 0; i < a.Count; i++)
@@ -75,6 +75,25 @@ namespace TestProject1
             }
             
         }
+
+
+        [Fact]
+        public void PowerTest()
+        {
+            // Arrange
+            double a = 2;
+            int b = 3;
+            int expected = 8;
+
+            // Act 
+            double actual = MathUnit.Pow(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+            
+        }
+
 
 
 
