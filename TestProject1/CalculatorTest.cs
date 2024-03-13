@@ -19,5 +19,22 @@ namespace TestProject1
             Assert.Equal(expected, actual);
 
         }
+
+        [Fact]
+        public void SubtractTest()
+        {
+            // Arrange
+            double a = 5;
+            double b = 3;
+            double expected = 2;
+
+            // Act
+            double actual = MathUnit.Sub(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+
     }
 }
