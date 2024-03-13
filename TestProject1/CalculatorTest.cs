@@ -94,6 +94,42 @@ namespace TestProject1
             
         }
 
+        [Fact]
+        public void SqrtTest()
+        {
+            // Arrange
+            double a = 81;
+            double expected = 9;
+
+            // Act
+            double actual = MathUnit.Sqrt(a);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+            // Arrange (Sqrt test with negative number)
+            double b = -9;
+            double expected2 = 0;
+
+            // Act
+            double actual2 = MathUnit.Sqrt(b);
+
+            // Assert
+            Assert.Equal(expected2, actual2);
+
+            // Arrange (Sqrt test with zero)
+            double c = 0;
+            double expected3 = 0;
+
+            // Act
+            double actual3 = MathUnit.Sqrt(c);
+
+            // Assert
+            Assert.Equal(expected3, actual3);
+
+            
+        }
+
 
 
 
