@@ -51,6 +51,32 @@ namespace TestProject1
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void DivideTest() 
+        {
+            // Arrange 
+            List<double> a = new List<double>() { 1, 2, 3, 4, 5 };
+            List<double> b = new List<double>() { 0, 3, 2, 4, 10 }; 
+            List<double> expected = new List<double>() { Double.NaN, 0.5, 1.5, 1, 0.5 };
+
+            // Act & Assert 
+            for (int i = 0; i < a.Count; i++)
+            {
+                try
+                {
+                    double actual = MathUnit.Div(a[i], b[i]);
+                    Assert.Equal(expected[i], actual); 
+                }
+                catch (DivideByZeroException ex)
+                {
+                    // Divide by zero at index 0
+                    Console.WriteLine($"Divide by zero at index {i}");
+                }
+            }
+            
+        }
+
+
 
     }
 }
